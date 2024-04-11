@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+@import url(navbar.css);
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #101827;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	margin: 0;
+	overflow: hidden;
+	color: #fff;
+}
+#header{
+	position: fixed;
+}
+.Header-logo{
+	font-size: 5rem;
+	color: #4d4d4d;
+	padding: 12px 48px;
+}
+
+.text-animation {
+	font-size: 5rem;
+	padding: 12px 48px;
+	color: #ffffff;
+	background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
+	background-position: 0;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation-fill-mode: forwards;
+	-webkit-text-size-adjust: none;
+	white-space: nowrap;
+	animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+	0% {
+		background-position: 0;
+	}
+
+	60% {
+		background-position: 440px;
+	}
+
+	100% {
+		background-position: 440px;
+	}
+}
+
+@media (max-width:1024px) and (min-width:768px) {
+	.Header-logo {
+		font-size: 4rem;
+	}
+}
+
+@media (max-width:425px) {
+	.Header-logo {
+		font-size: 3rem;
+	}
+}
+
+#header {
+    position: fixed;
+}

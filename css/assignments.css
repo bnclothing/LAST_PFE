@@ -1,0 +1,86 @@
+.container-as {
+    background-color: rgba(0, 0, 0, 0.324);
+    width: 89vw;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 80vh;
+    overflow: auto;
+	border-radius: 10px;
+	margin-top: 60px;
+}
+
+#assignments-container{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.container-as::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(240, 248, 255, 0.067);
+    margin: 5px;
+    border-radius: 25px;
+    height: fit-content;
+    height: 32vh;
+    transition: all .5s;
+}
+
+.assignment-card{
+    
+}
+
+.card:last-of-type{
+    cursor: pointer;
+}
+
+.card:last-of-type:hover{
+    background-color: rgba(240, 248, 255, 0.1);
+}
+
+.side1{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 25px 0 0 25px;
+}
+
+.side2{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 25px 25px 0;
+    flex-wrap: wrap;
+}
+
+.type{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.35);
+    transition: all .2s;
+}
+
+.type:hover{
+    background-color: rgba(0, 0, 0, 0.59);
+}
+
+.type:first-of-type{
+    border-radius: 0 25px 0 0;
+}
+
+.type:last-of-type{
+    border-radius: 0 0 25px 0;
+}

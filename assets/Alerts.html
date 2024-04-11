@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h3 {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .alert {
+            width: 50%;
+            margin: 20px auto;
+            padding: 30px;
+            position: relative;
+            border-radius: 5px;
+            box-shadow: 0 0 15px 5px #ccc;
+            transition: 1s all;
+        }
+
+        .close {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            opacity: 0.5;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 50%;
+            right: 15px;
+            top: 25px;
+            text-align: center;
+            font-size: 1.6em;
+            cursor: pointer;
+            transition: 1s all;
+        }
+
+        .alert.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .simple-alert {
+            background-color: #ebebeb;
+            border-left: 5px solid #c0c0c0;
+
+        }
+
+        .simple-alert .close {
+            border-color: #c0c0c0;
+            color: #c0c0c0;
+        }
+
+        .success-alert {
+            background-color: #a8f0c6;
+            border-left: 5px solid #66c285;
+
+        }
+
+        .success-alert .close {
+            border-color: #66c285;
+            color: #66c285;
+        }
+
+        .danger-alert {
+            background-color: #f7a7a3;
+            border-left: 5px solid #e75b5b;
+
+        }
+
+        .danger-alert .close {
+            border-color: #e75b5b;
+            color: #e75b5b;
+        }
+
+        .warning-alert {
+            background-color: #ffd48a;
+            border-left: 5px solid #e4b74e;
+
+        }
+
+        .warning-alert .close {
+            border-color: #e4b74e;
+            color: #e4b74e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="alert simple-alert">
+        <h3>Simple Alert Message</h3>
+        <a class="close">&times;</a>
+    </div>
+
+    <div class="alert success-alert">
+        <h3>Success Alert Message</h3>
+        <a class="close">&times;</a>
+    </div>
+
+    <div class="alert danger-alert">
+        <h3>Danger Alert Message</h3>
+        <a class="close">&times;</a>
+    </div>
+
+    <div class="alert warning-alert">
+        <h3>Warning Alert Message</h3>
+        <a class="close">&times;</a>
+    </div>
+    <script>
+        // Get all elements with class "close"
+        var closeButtons = document.querySelectorAll('.close');
+
+        // Add a click event listener to each close button
+        closeButtons.forEach(function (closeButton) {
+            closeButton.addEventListener('click', function () {
+                // Find the parent element with class "alert" and fade it out
+                var alertElement = this.closest('.alert');
+                if (alertElement) {
+                    alertElement.classList.add('hidden');
+
+                    // Optionally, remove the element after the transition completes
+                    setTimeout(function () {
+                        alertElement.style.display = 'none';
+                    }, 1000);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

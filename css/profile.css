@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+@import url(navbar.css);
+@import url(help.css);
+
+
+body {
+    background: #101827;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+.light {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(66, 59, 132, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 30px 20px rgba(66, 59, 132, 0.5);
+    animation: glow 1.5s linear infinite alternate;
+    transition: width 0.3s ease, height 0.3s ease, opacity 0.5s ease;
+}
+
+@keyframes glow {
+    to {
+        box-shadow: 0px 0px 30px 20px #5360ed72;
+        background-color: #5360ed72;
+
+    }
+}
+
+.main-informations {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.346);
+    margin: 0 50px;
+    padding: 50px;
+    border-radius: 30px;
+    position: relative;
+    /* Ensure position:relative for absolute positioning of light */
+    overflow: hidden;
+}
+
+.main-informations:hover .light {
+    width: 100px;
+    /* Adjust the size of the light effect */
+    height: 100px;
+    /* Adjust the size of the light effect */
+}
+
+.image {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+.informations,.image-container{
+    flex-basis: 50%;
+}
+
+.image>#profile {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.name {
+    font-size: 3.5rem;
+    background: -webkit-linear-gradient(left, #284897, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ecole-informations {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 50px;
+}
+
+.department,
+.filliere {
+    flex-basis: 40%;
+    background-color: rgba(0, 0, 0, 0.346);
+    margin: 50px 0;
+    margin-bottom: 0;
+    padding: 50px;
+    border-radius: 30px;
+    position: relative;
+}
+
+.title{
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+
+.informations-text{
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #555;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(79, 192, 210, 1);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(63, 153, 167);
+}
+
+.edit {
+    text-align: center;
+    width: 100%;
+    padding: 30px 0;
+}
+
+.edit-btn {
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.top {
+    margin: 20px;
+    padding: 15px;
+}
+
+
+.button-29 {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 25px;
+    width: 100px;
+}
+
+.button-29:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-4px);
+}
+
+.button-29:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(4px);
+}
+
+.green{
+    background-image: radial-gradient(100% 100% at 100% 0, #00ff51 0, #008000 100%);
+}
+
+.red{
+    background-image: radial-gradient(100% 100% at 100% 0, #910500 0, #ff0000 100%);
+}
+
+.green:hover{
+    box-shadow: rgba(9, 88, 22, 0.4) 0 4px 8px, rgba(46, 192, 13, 0.3) 0 7px 13px -3px, #02500b 0 -3px 0 inset;
+}
+
+.red:hover{
+    box-shadow: rgba(202, 34, 34, 0.4) 0 4px 8px, rgba(170, 12, 12, 0.3) 0 7px 13px -3px, #830707 0 -3px 0 inset;
+}
+
+
+
+
+
+
+.edit-informations {
+    width: 600px;
+    height: 150px;
+}
+
+#first-name,
+#last-name {
+    width: 400px;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+}
+
+.edit-informations input {
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    background-color: #101827;
+    color: white;
+}
+
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    padding: 15px;
+}
+
+.btn {
+    margin: 0 30px;
+}

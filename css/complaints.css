@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#header {
+    position: fixed;
+}
+
+.wrapper {
+    margin: 0;
+}
+
+.complaint-edit {
+    background-color: #0a090987;
+    width: 1000px;
+    border-radius: 25px;
+    overflow: auto;
+}
+
+.complaint-edit::-webkit-scrollbar{
+    display: none;
+}

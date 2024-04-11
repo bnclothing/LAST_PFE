@@ -1,0 +1,50 @@
+.alert {
+    width: 25%;
+    margin: 20px auto;
+    padding: 15px 30px;
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 5px #ccc;
+    transition: 1s all;
+    bottom: 10px;
+    right: 10px;
+    z-index: 999;
+    animation: slide 1s ;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        right: -100px;
+    }
+
+    100% {
+        opacity: 1;
+        right: 10px;
+    }
+}
+
+.alert.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.simple-alert {
+    background-color: #ebebeb;
+    border-left: 5px solid #c0c0c0;
+}
+
+.success-alert {
+    background-color: #a8f0c6;
+    border-left: 5px solid #66c285;
+}
+
+.danger-alert {
+    background-color: #f7a7a3;
+    border-left: 5px solid #e75b5b;
+}
+
+.warning-alert {
+    background-color: #ffd48a;
+    border-left: 5px solid #e4b74e;
+}

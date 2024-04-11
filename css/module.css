@@ -1,0 +1,105 @@
+.screen{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    padding: 10px 25px;
+}
+
+.back-container{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #123493;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn.Add{
+    border-radius: 0 5px 5px 0;
+}
+
+.btn.Back:hover{
+    transform: translateY(-2px);
+}
+
+.btn.Add:hover{
+    background-color: #0d276e;
+}
+
+.content{
+    width: 100%;
+    height: 85%;
+    background-color: rgba(0, 0, 0,0.5);
+    border-radius: 10px;
+}
+
+.filliere,.modules{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.selected-modules{
+    width: 100%;
+    height: 70%;
+    overflow: auto;
+}
+
+.line{
+    width: 100%;
+    height: 15%;
+    background-color: rgba(77, 78, 81, 0.898);
+    display: flex;
+}
+
+.col{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+#modules{
+    width: 40%;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+}
+
+.module{
+    font-size: 1.2rem;
+}
+
+#modules,.btn.Add{
+    height: 60%;
+}
+
+i{
+    color:white;
+    transition: all .5s;
+}
+
+i:hover{
+    color: rgb(120, 120, 120);
+}
+
+.module-input{
+    padding: 10px;
+    width: 60%;
+    border: none;
+    border-radius: 7px;
+}
